@@ -1,0 +1,26 @@
+server.name: kibana
+server.host: "0.0.0.0"
+
+elasticsearch.hosts: ["http://elasticsearch_container:9200"]
+elasticsearch.serviceAccountToken: "AAEAAWVsYXN0aWMva2liYW5hL2tpYmFuYS1zZXJ2aWNlLXRva2VuOjZhSmJOX3liUXVHNUt6bFZqQVNnLWc"  
+
+xpack.security.enabled: true
+xpack.fleet.enabled: true
+xpack.fleet.agents.enabled: true
+xpack.fleet.agents.elasticsearch.hosts: ["http://elasticsearch_container:9200"]
+xpack.fleet.agents.kibana.host: "http://localhost:5601"
+
+
+xpack.fleet.packages:
+  - name: system
+    version: latest
+  - name: elastic_agent
+    version: latest
+
+xpack.fleet.agentPolicies:
+  - name: Fleet Default Policy
+    id: fleet-default-policy
+    is_default: true
+    is_managed: true
+    namespace: default
+    package_policies: []  # 👈 BẮT BUỘC
