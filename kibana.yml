@@ -2,7 +2,9 @@ server.name: kibana
 server.host: "0.0.0.0"
 
 elasticsearch.hosts: ["http://elasticsearch_container:9200"]
-elasticsearch.serviceAccountToken: "AAEAAWVsYXN0aWMva2liYW5hL2tpYmFuYS1zZXJ2aWNlLXRva2VuOjZhSmJOX3liUXVHNUt6bFZqQVNnLWc"  
+# elasticsearch.serviceAccountToken: "AAEAAWVsYXN0aWMva2liYW5hL2tpYmFuYS1zZXJ2ZXItdG9rZW46V0Vod25wN2tTcjZLd3U4Q3NIU3EzZw"
+elasticsearch.username: "kibana_system"
+elasticsearch.password: "BMm9OYUHMestJH3MOTNL"
 
 xpack.security.enabled: true
 xpack.fleet.enabled: true
